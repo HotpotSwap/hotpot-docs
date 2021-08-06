@@ -35,8 +35,7 @@
     "message": "GitHub",
     "description": "The label of footer link with label=GitHub linking to https://github.com/hotpotswap/doc.hotpot.cool"
   },
-  "copyright": {
-    "message": "Copyright © 2021 Hotpot Swap, Inc. Built with Docusaurus.",
-    "description": "The footer copyright"
+  "link.title.Ecosystem": {
+    "message": "生态"
   }
 }

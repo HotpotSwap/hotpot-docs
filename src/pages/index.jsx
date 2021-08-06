@@ -12,6 +12,7 @@ import ThemedImage from "@theme/ThemedImage";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import SearchBar from "@theme-original/SearchBar";
+import Translate, { translate } from '@docusaurus/Translate';
 
 import {
   InformationCircleIcon,
@@ -21,27 +22,30 @@ import {
   CodeIcon,
 } from "@heroicons/react/outline";
 
+
 export const actions = [
   {
-    title: "What is Hotpot",
+    title: <Translate>What is Hotpot</Translate>,
     href: "#",
     icon: InformationCircleIcon,
     to: "./protocol/introduction",
-    text: `了解 Hotpot 核心概念: 跨链、兑换、流动性。`,
+    text: <Translate id="homepage.action.introduction">
+      Understand the core concepts of hot pot: cross-chain, exchange, and liquidity.
+    </Translate>
   },
   {
-    title: "Smart contract overview",
+    title: <Translate>Smart contract overview</Translate>,
     href: "#",
     icon: BookOpenIcon,
     to: "./protocol/reference/smart-contracts",
-    text: `了解 Hotpot 智能合约核心逻辑，轻松集成到您的DeFi项目中。`,
+    text: <Translate id="homepage.action.smart-contracts">...</Translate>,
   },
   {
-    title: "Hot to use Hotpot",
+    title: <Translate>How to use Hotpot</Translate>,
     href: "#",
     icon: QuestionMarkCircleIcon,
     to: "./doc/reference/smart-contracts",
-    text: `Hotpot 使用教程，快速入手使用`,
+    text: <Translate id="homepage.action.how-to-use">...</Translate>,
   },
 ];
 
@@ -237,7 +241,8 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <h1 style={{ fontWeight: "600" }}> Welcome to the Hotpot Docs</h1>
+            <h1 style={{ fontWeight: "600" }}>
+              <Translate>Welcome to the Hotpot Docs</Translate></h1>
             <HideMedium>
               <SearchBar />{" "}
             </HideMedium>
@@ -273,7 +278,9 @@ export default function Home() {
                   <h3 style={{ marginBottom: ".75rem", color: action.color }}>
                     {action.title}
                   </h3>
-                  <p style={{ marginBottom: "0.5rem" }}>{action.text}</p>
+                  <p style={{ marginBottom: "0.5rem" }}>
+                    {action.text}
+                  </p>
                 </ShadowCard>
               </Link>
             ))}

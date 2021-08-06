@@ -7,8 +7,8 @@
     "message": "教程",
     "description": "Navbar item with label Tutorial"
   },
-  "item.label.Developer": {
-    "message": "开发者",
+  "item.label.Contracts": {
+    "message": "智能合约",
     "description": "Navbar item with label Developer"
   },
   "item.label.Announcement": {

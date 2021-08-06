@@ -159,10 +159,31 @@
     "message": "On this page",
     "description": "The label used by the button on the collapsible TOC component"
   },
-  "Welcome to Hotpot": {
-    "message": "欢迎来到 Hotpot"
+  "Welcome to the Hotpot Docs": {
+    "message": "欢迎来到 Hotpot 文档库"
   },
   "Hotpot Tutorial": {
     "message": "Hotpot教程"
+  },
+  "homepage.action.introduction": {
+    "message": "了解 Hotpot 核心概念: 跨链、兑换、流动性。",
+    "description": "首页的什么是Hotpot简介"
+  },
+  "homepage.action.smart-contracts": {
+    "message": "了解 Hotpot 智能合约核心逻辑，轻松集成到您的DeFi项目中。",
+    "description": "首页的什么是Hotpot简介"
+  },
+  "homepage.action.how-to-use": {
+    "message": "Hotpot 使用教程，快速入手使用",
+    "description": "首页的什么是Hotpot简介"
+  },
+  "What is Hotpot": {
+    "message": "Hotpot 是什么"
+  },
+  "Smart contract overview": {
+    "message": "Hotpot 智能合约"
+  },
+  "How to use Hotpot": {
+    "message": "如何使用 Hotpot"
   }
 }
