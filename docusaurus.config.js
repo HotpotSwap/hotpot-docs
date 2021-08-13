@@ -125,10 +125,6 @@ module.exports = {
               label: "Twitter",
               href: "https://hotpot.cool/",
             },
-            {
-              label: "Blog",
-              href: "https://htopot.cool/blog/",
-            },
           ],
         },
       ],
@@ -171,10 +167,6 @@ module.exports = {
           // includeCurrentVersion: false,
           // disableVersioning: true,
           editUrl: 'https://github.com/hotpotswap/doc.hotpot.cool/edit/main/'
-        },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/hotpotswap/doc.hotpot.cool/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
