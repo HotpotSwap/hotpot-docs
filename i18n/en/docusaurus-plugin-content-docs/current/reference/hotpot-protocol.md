@@ -1,17 +1,17 @@
 ---
 id: smart-contracts
-title: Hotpot 跨链协议
+title: Hotpot Cross-Link Protocol
 skug: /reference
 sidebar_position: 1
 ---
 
 Author: [ZeroOne Team](https://01.finance/) Version: 0.1
 
-## 摘要
+## Abstract
 
-Hotpot 是一种无损跨链兑换的去中心化解决方案，由一组持久、不可升级的智能合约来实现。旨在帮助用户（包括合约）在多链环境中，便捷、快速、安全地跨链兑换资产。具有去中心化、用时短、成本低和零滑点等特性。最终，Hotpot 将服务于有跨链需求的 DeFi 实现可编程跨链。
+Hotpot is a non-destructive cross-chain conversion, implemented by a continuous, non-upgradable set of smart contracts.旨在帮助用户（包括合约）在多链环境中，便捷、快速、安全地跨链兑换资产。具有去中心化、用时短、成本低和零滑点等特性。最终，Hotpot 将服务于有跨链需求的 DeFi 实现可编程跨链。
 
-## 为什么需要 Hotpot？
+## Why Hotpot?
 
 当 Flux 需要实现跨链借贷时，对已流行的资产跨链协议，都无法满足 Flux 需求。为了支持 Flux 跨链借贷，ZeroOne 团队自行研发资产跨链协议。通过以下两方面对比解释 Hotpot 要解决的问题。
 
