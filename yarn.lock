@@ -1337,7 +1337,7 @@
     utility-types "^3.10.0"
     webpack "^5.40.0"
 
-"@docusaurus/plugin-content-pages@2.0.0-beta.4":
+"@docusaurus/plugin-content-pages@2.0.0-beta.4", "@docusaurus/plugin-content-pages@^2.0.0-beta.4":
   version "2.0.0-beta.4"
   resolved "https://registry.nlark.com/@docusaurus/plugin-content-pages/download/@docusaurus/plugin-content-pages-2.0.0-beta.4.tgz#47bdaa8d8711502f6ba75ba036ebd64a3991034e"
   integrity sha1-R72qjYcRUC9rp1ugNuvWSjmRA04=

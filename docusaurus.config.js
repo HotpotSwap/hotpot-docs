@@ -7,7 +7,8 @@ module.exports = {
   tagline: 'Hotpot Documentation and Guides',
   url: 'https://docs.hotpot.cool/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  trailingSlash: false,
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'hotpot', // Usually your GitHub org/user name.
@@ -174,5 +175,47 @@ module.exports = {
         },
       },
     ],
+    [
+
+      '@docusaurus/plugin-content-pages',
+      {
+        /**
+         * Path to data on filesystem
+         * relative to site dir
+         * components in this directory will be automatically converted to pages
+         */
+        path: 'src/pages',
+        /**
+         * URL route for the page section of your site
+         * do not include trailing slash
+         */
+        routeBasePath: './',
+        include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+        /**
+         * No route will be created for matching files
+         */
+        exclude: [
+          '**/_*.{js,jsx,ts,tsx,md,mdx}',
+          '**/_*/**',
+          '**/*.test.{js,jsx,ts,tsx}',
+          '**/__tests__/**',
+        ],
+        /**
+         * Theme component used by markdown pages.
+         */
+        mdxPageComponent: '@theme/MDXPage',
+        /**
+         * 传递至 MDX 的 Remark 及 Rehype 插件。
+         */
+        remarkPlugins: [],
+        rehypePlugins: [],
+        /**
+         * 于 Docusaurus 自带的默认 Remark 及 Rehype 插件前
+         * 传递至 MDX 的自定义 Remark 及 Rehype 插件。
+         */
+        beforeDefaultRemarkPlugins: [],
+        beforeDefaultRehypePlugins: [],
+      }
+    ]
   ],
 };
