@@ -3,6 +3,6 @@ sidebar_position: 1
 ---
 
 
-# Tutorial Intro
+# 指引
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Hotpot 技术

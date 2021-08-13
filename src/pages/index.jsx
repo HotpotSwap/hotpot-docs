@@ -28,7 +28,7 @@ export const actions = [
     title: <Translate>What is Hotpot</Translate>,
     href: "#",
     icon: InformationCircleIcon,
-    to: "./protocol/introduction",
+    to: "./protocol/tutorial/introduction",
     text: <Translate id="homepage.action.introduction">
       Understand the core concepts of hot pot: cross-chain, exchange, and liquidity.
     </Translate>
