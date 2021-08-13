@@ -44,7 +44,7 @@ export const actions = [
     title: <Translate>How to use Hotpot</Translate>,
     href: "#",
     icon: QuestionMarkCircleIcon,
-    to: "./doc/tutorial",
+    to: "./protocol/tutorial/README",
     text: <Translate id="homepage.action.how-to-use">...</Translate>,
   },
 ];
