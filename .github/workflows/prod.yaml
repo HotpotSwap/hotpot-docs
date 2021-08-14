@@ -38,8 +38,8 @@ jobs:
           retention-days: 1
 
   deploy-to-server:
-    name: deploy the flux frontend to static server
-    needs: [upload-static]
+    name: deploy the hotpot docs frontend to static server
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
