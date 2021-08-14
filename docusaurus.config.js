@@ -13,7 +13,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'hotpot', // Usually your GitHub org/user name.
   projectName: 'hotpot-doc', // Usually your repo name.
-  i18n: { defaultLocale: 'en', locales: ['en', 'zh-cn'], },
+  i18n: { defaultLocale: 'zh-cn', locales: ['en', 'zh-cn'], },
   themeConfig: {
     // announcementBar: {
     //   id: 'support_us', // 用于辨别此消息的值。

@@ -1157,6 +1157,13 @@
     "@babel/helper-validator-identifier" "^7.14.8"
     to-fast-properties "^2.0.0"
 
+"@crowdin/cli@3":
+  version "3.6.4"
+  resolved "https://registry.nlark.com/@crowdin/cli/download/@crowdin/cli-3.6.4.tgz#37e872fbbc85fdfb55e8deba4e35d4393a802aad"
+  integrity sha1-N+hy+7yF/ftV6N66TjXUOTqAKq0=
+  dependencies:
+    shelljs "^0.8.4"
+
 "@docsearch/css@3.0.0-alpha.39":
   version "3.0.0-alpha.39"
   resolved "https://registry.nlark.com/@docsearch/css/download/@docsearch/css-3.0.0-alpha.39.tgz#1ebd390d93e06aad830492f5ffdc8e05d058813f"
