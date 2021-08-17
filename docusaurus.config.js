@@ -42,7 +42,7 @@ module.exports = {
 
         },
         {
-          to: "/protocol/reference/smart-contracts",
+          to: "/protocol/reference/hotpot-protocol",
           position: 'left',
           label: 'Contracts',
           className: "persistent",

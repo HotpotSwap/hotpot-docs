@@ -1,5 +1,5 @@
 ---
-id: smart-contracts
+id: hotpot-protocol
 title: Hotpot 跨链协议
 skug: /reference
 sidebar_position: 1

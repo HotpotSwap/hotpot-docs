@@ -37,7 +37,7 @@ export const actions = [
     title: <Translate>Smart contract overview</Translate>,
     href: "#",
     icon: BookOpenIcon,
-    to: "./protocol/reference/smart-contracts",
+    to: "./protocol/reference/hotpot-protocol",
     text: <Translate id="homepage.action.smart-contracts">...</Translate>,
   },
   {
