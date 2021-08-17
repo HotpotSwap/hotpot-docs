@@ -1,4 +1,4 @@
-#**HotPot用户操作手册**
+**Hotpot用户操作手册**
 
 ------
 
@@ -8,26 +8,26 @@
 Hotpot 是一种无损跨链兑换的去中心化解决方案，由一组持久、不可升级的智能合约来实现。旨在帮助用户（包括合约）在多链环境中，便捷、快速、安全地跨链兑换资产。具有去中心化、用时短、成本低和零滑点等特性。最终，Hotpot 将服务于有跨链需求的 DeFi 实现可编程跨链。
 
 ## 1.2特色
-1.无损跨链交易：零滑点
-2.流动性充足、灵活:Hotpot 将从 [Flux](https://flux.01.finance/) 中信用借款,跨链兑换时，如果流动性不足将自动从 Flux 中借款来弥补流动性。
-3.用时短成本低:Hotpot 无需复杂耗时的操作，一键操作即可 3.5 分钟完成资产跨链，无需 KYC，告别繁琐。
+1. 无损跨链交易：零滑点
+2. 流动性充足、灵活:Hotpot 将从 [Flux](https://flux.01.finance/) 中信用借款,跨链兑换时，如果流动性不足将自动从 Flux 中借款来弥补流动性。
+3. 用时短成本低:Hotpot 无需复杂耗时的操作，一键操作即可 3.5 分钟完成资产跨链，无需 KYC，告别繁琐。
 
 # 2.功能
 ## 2.1 Swap
 
-HotPot 允许用户将多个已支持的公链中将资产跨出到其他公链中，并且是无损的。即使用户没有登录也能够选择资产和输入跨出数量，只是无法进行交易操作而已。兑换关系由 hotpot系统设定，主要保证能1:1兑换，消除磨损。
+Hotpot 允许用户将多个已支持的公链中将资产跨出到其他公链中，并且是无损的。即使用户没有登录也能够选择资产和输入跨出数量，只是无法进行交易操作而已。兑换关系由 Hotpot系统设定，主要保证能1:1兑换，消除磨损。
 
 **第1步：来到Swap页面**
 
-HotPot的首页即为Swap页面（[https://app.hotpot.cool](https://app.hotpot.cool/)）
+Hotpot的首页即为Swap页面（[https://app.Hotpot.cool](https://app.Hotpot.cool/)）
 
 ![image-20210816161259884](assets/guide/image-20210816161259884.png)
 
 **第2步：连接钱包**
 
-1.点击Connect Wallet，弹出钱包选择面板，现在HotPot支持的钱包有 MetaMash 和 Wallet Connect
+1. 点击Connect Wallet，弹出钱包选择面板，现在Hotpot支持的钱包有 MetaMash 和 Wallet Connect
 
-2.选择钱包之后唤醒钱包，选择账户（即你跨出资产的钱包地址），确认连接之后即可登录钱包
+2. 选择钱包之后唤醒钱包，选择账户（即你跨出资产的钱包地址），确认连接之后即可登录钱包
 
 ![image-20210816162221501](assets/guide/image-20210816162221501-9102148.png)
 
@@ -36,13 +36,14 @@ HotPot的首页即为Swap页面（[https://app.hotpot.cool](https://app.hotpot.c
 **第3步：Swap**
 1. 选择From和To的资产、To的钱包地址，输入要兑换的数量，即可看到预估所需的总费用
 
-   ps：（1）HotPot前期支持跨链的公链有：HECO、BSC、OEC
+   ps：
+   （1）Hotpot前期支持跨链的公链有：HECO、BSC、OEC
 
-   ​       （2）HotPot前期支持的跨链资产有：ETH、BTC、USDT、USDC、DAI
+   （2）Hotpot前期支持的跨链资产有：ETH、BTC、USDT、USDC、DAI
 
-	​	   （3）HotPot前期支持的暂时只支持同币种跨链兑换
+	​（3）Hotpot前期支持的暂时只支持同币种跨链兑换
 
-   ​       （4）From为当前登录的钱包地址；To默认为当前登录钱包地址，支持选择已维护的钱包地址
+   （4）From为当前登录的钱包地址；To默认为当前登录钱包地址，支持选择已维护的钱包地址
 
 2. 点击【Swap】，进入交易确认页，展示到账资产的数量和价值、费用明细等，Exchange Fee默认使用Flux支付（八折优惠），也可以选择本币支付
 
@@ -60,7 +61,7 @@ HotPot的首页即为Swap页面（[https://app.hotpot.cool](https://app.hotpot.c
 
 Hotpot 的流动性由FluxV1提供，解决滑点问题。
 
-点击顶部菜单的 Liquidity，即可进入流动性页面，你可以查看HotPot当前支持的资产在各个公链的流动性。
+点击顶部菜单的 Liquidity，即可进入流动性页面，你可以查看Hotpot当前支持的资产在各个公链的流动性。
 
 ![image-20210816185220873](assets/guide/image-20210816185220873.png)
 
