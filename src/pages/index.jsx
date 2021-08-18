@@ -6,7 +6,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import "./styles.module.css";
 import styled from "@emotion/styled";
 
-import Discord from "@site/static/img/discord.svg";
+import Telegram from "@site/static/img/telegram.svg";
 
 import ThemedImage from "@theme/ThemedImage";
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -44,7 +44,7 @@ export const actions = [
     title: <Translate>How to use Hotpot</Translate>,
     href: "#",
     icon: QuestionMarkCircleIcon,
-    to: "./protocol/tutorial/README",
+    to: "./protocol/tutorial/how-to-use",
     text: <Translate id="homepage.action.how-to-use">...</Translate>,
   },
 ];
@@ -247,13 +247,13 @@ export default function Home() {
               <SearchBar />{" "}
             </HideMedium>
           </div>
-          <StyledTitleImage
+          {/* <StyledTitleImage
             alt="Docusaurus themed image"
             sources={{
               light: useBaseUrl("/img/grow.png"),
               dark: useBaseUrl("/img/grow2.png"),
             }}
-          />
+          /> */}
           <Row>
             {actions.map((action) => (
               <Link style={{ textDecoration: "none" }} to={action.to}>
@@ -295,10 +295,10 @@ export default function Home() {
             href={"https://discord.gg"}
           >
             <CenterCard>
-              <Discord style={{ width: "48px", height: "48px" }} />
+              <Telegram style={{ width: "48px", height: "48px" }} />
               <div>
-                <h3>Discord</h3>
-                <p>Hop in to the #dev-chat to get realtime help.</p>
+                <h3>Telegram</h3>
+                <p>Hop in to the chanel to get realtime help.</p>
               </div>
             </CenterCard>
           </Link>

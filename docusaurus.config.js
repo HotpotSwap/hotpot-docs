@@ -35,7 +35,7 @@ module.exports = {
       items: [
         // { type: 'search', position: 'right', },
         {
-          to: '/protocol/tutorial/README',
+          to: '/protocol/tutorial/introduction',
           position: 'left',
           label: 'Tutorial',
           className: "persistent",
@@ -105,10 +105,10 @@ module.exports = {
               label: "Analytics",
               href: "https://hotpot.cool/",
             },
-            {
-              label: "Brand Assets",
-              href: "https://hotpot.cool/Hotpot_brand_assets.zip",
-            },
+            // {
+            //   label: "Brand Assets",
+            //   href: "https://hotpot.cool/Hotpot_brand_assets.zip",
+            // },
           ],
         },
         {
@@ -119,12 +119,12 @@ module.exports = {
               href: "https://discuss.01.finance/t/hotpot/",
             },
             {
-              label: "Discord",
-              href: "https://hotpot.cool/",
+              label: "Telegram",
+              href: "https://t.me/ohHotpot/",
             },
             {
               label: "Twitter",
-              href: "https://hotpot.cool/",
+              href: "https://twitter.com/Hotpot01/",
             },
           ],
         },
