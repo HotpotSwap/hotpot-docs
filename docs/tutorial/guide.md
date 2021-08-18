@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## 跨链兑换 {#swap}
 
-Hotpot 允许用户将多个已支持的公链中将资产跨出到其他公链中，并且是无损的。即使用户没有登录也能够选择资产和输入跨出数量，只是无法进行交易操作而已。兑换关系由 Hotpot 系统设定，主要保证能1:1兑换，消除磨损。
+Hotpot 允许用户将多个已支持的公链中将资产跨出到其他公链中，并且是无损的。兑换关系由 Hotpot 系统设定，主要保证能 1:1 兑换，消除磨损。
 
 ### 第1步：来到Swap页面 {#swap-1}
 
@@ -16,7 +16,7 @@ Hotpot的首页即为Swap页面（[https://app.Hotpot.cool](https://app.Hotpot.c
 
 ### 第2步：连接钱包 {#swap-2}
 
-1. 点击Connect Wallet，弹出钱包选择面板，现在Hotpot支持的钱包有 MetaMash 和 Wallet Connect
+1. 点击Connect Wallet，弹出钱包选择面板，现在Hotpot支持的钱包有 [MetaMask](https://metamask.io/) 和 Wallet Connect
 
 2. 选择钱包之后唤醒钱包，选择账户（即你跨出资产的钱包地址），确认连接之后即可登录钱包
 
