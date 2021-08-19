@@ -160,15 +160,12 @@
     "description": "The label used by the button on the collapsible TOC component"
   },
   "homepage.action.introduction": {
-    "message": "了解 Hotpot 核心概念: 跨链、兑换、流动性。",
-    "description": "首页的什么是Hotpot简介"
+    "message": "Understand the core concepts of Hotpot: cross-chain, exchange, and liquidity."
   },
   "homepage.action.smart-contracts": {
-    "message": "了解 Hotpot 智能合约核心逻辑，轻松集成到您的DeFi项目中。",
-    "description": "首页的什么是Hotpot简介"
+    "message": "Understand the core logic of Hotpot smart contract and easily integrate it into your DeFi project."
   },
   "homepage.action.how-to-use": {
-    "message": "Hotpot 使用教程，快速入手使用",
-    "description": "首页的什么是Hotpot简介"
+    "message": "Hotpot tutorial, get started quickly"
   }
 }

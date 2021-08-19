@@ -1,43 +1,43 @@
 ---
 id: how-to-use
-title: Hotpot 使用手册
+title: Hotpot User Manual
 sidebar_position: 2
 ---
 
-## 跨链兑换 {#swap}
+## Cross-chain swap {#swap}
 
-Hotpot 允许用户将多个已支持的公链中将资产跨出到其他公链中，并且是无损的。兑换关系由 Hotpot 系统设定，主要保证能 1:1 兑换，消除磨损。
+Hotpot Protocol allows users to cross-chain swap their assets seamlessly between selected blockchain networks without the need to bear any losses. Even if a user did not connect their wallet they can select the assets and the amount to be cross-chained, but it cannot be processed. The swap relationship is set by the Hotpot Protocol and promises a 1:1 cross-chain swap.
 
-### 第1步：来到Swap页面 {#swap-1}
+### Step 1: Open the website {#swap-1}
 
-Hotpot的首页即为Swap页面（[https://app.Hotpot.cool](https://app.Hotpot.cool/)）
+Hotpot Protocol’s webpage is set as the Swap page([https://app.hotpot.cool](https://app.hotpot.cool/))
 
 ![image-20210816161259884](assets/guide/image-20210816161259884.png)
 
-### 第2步：连接钱包 {#swap-2}
+### Step 2: Connect your wallet {#swap-2}
 
-1. 点击Connect Wallet，弹出钱包选择面板，现在Hotpot支持的钱包有 [MetaMask](https://metamask.io/) 和 Wallet Connect
+1. Click on “Connect Wallet”, a pop-up window will appear to choose a supported wallet ( [MetaMask](https://metamask.io/) and Wallet Connect).
 
-2. 选择钱包之后唤醒钱包，选择账户（即你跨出资产的钱包地址），确认连接之后即可登录钱包
+2. After connecting your wallet, choose the account with the cross-chain assets and confirm the connection to HotPot Protocol.
 
 ![image-20210816162221501](assets/guide/image-20210816162221501-9102148.png)
 
 ![image-20210816162309641](assets/guide/image-20210816162309641-9102190.png)
 
-### 第3步：确认兑换 {#swap-3}
+### Step 3: Confirm Swap {#swap-3}
 
-1. 选择From和To的资产、To的钱包地址，输入要兑换的数量，即可看到预估所需的总费用。
+1. Select your to be cross-chain swapped asset in "From" and "To", and input the amount. The estimated transaction fees will be shown.
 
->   1. Hotpot前期支持跨链的公链有：HECO、BSC、OEC
->   2. Hotpot前期支持的跨链资产有：ETH、BTC、USDT、USDC、DAI
->   3. Hotpot前期支持的暂时只支持同币种跨链兑换
->   4. From为当前登录的钱包地址；To默认为当前登录钱包地址，支持选择已维护的钱包地址
+>   1. Supported networks: HECO, BSC, OEC.
+>   2. Supported assets: ETH, BTC, USDT, USD, DAI.
+>   3. Currently, Hotpot only supports the cross-chain swap of the same assets. ( E.g.: USDT from ERC20 to BEP20).
+>   4. "From" is the connected wallet, "To" is set to the same wallet address as the connected wallet by default. If you wish to select an alternative "To" address, please input the address.
 
-2. 点击【Swap】，进入交易确认页，展示到账资产的数量和价值、费用明细等，Exchange Fee默认使用 Flux支付（活动初期八折优惠），也可以选择本币支付。
+1. Click "Swap" to confirm your cross-chain swap details and select the payment asset for the exchange fee. $FLUX is selected as default exchange fee asset with a 20% discount, but the cross-chain asset can be chosen.
 
-3. 点击【Confirm To Swap】，唤醒钱包并确认交易，进入交易等待页。可以随时在浏览器查询交易状态。
+2. Click "Confirm Swap", a pop-up window will appear, and confirm the transaction.
 
-4. 等待交易成功之后，即完成Swap，你就可以到To的钱包地址查看到账的资产。
+3. After the cross-chain swap is successfully completed, you can find your cross-chain swapped asset in your "To" wallet.
 
 ![image-20210816173439556](assets/guide/image-20210816173439556-9106482.png)
 
@@ -45,20 +45,21 @@ Hotpot的首页即为Swap页面（[https://app.Hotpot.cool](https://app.Hotpot.c
 
 ![image-20210816224346812](assets/guide/image-20210816224346812-9125028-9125569.png)
 
-## 流动性 {#liquidity}
+## Liquidity {#liquidity}
 
-Hotpot 的流动性由FluxV1提供，解决滑点问题。
+Hotpot Protocol's initial liquidity is provided by Flux V1 to eliminate slippage.
 
-点击顶部菜单的 Liquidity ，即可进入流动性页面，你可以查看Hotpot当前支持的资产在各个公链的流动性。
+In the Liquidity tab (in the top menu on the website) the liquidity of all assets on the various networks can be monitored.
 
 ![image-20210816185220873](assets/guide/image-20210816185220873.png)
 
-## 钱包  {#wallet}
+## Wallet  {#wallet}
 
-钱包资产，聚合展示账户在多链的资产分布信息，可以方便你查阅。
+In the Wallet tab (in the top menu on the website), the assets in the connected wallet on Hotpot’s supported networks are shown.
 
-1. 你可以选择当前登录钱包下维护的钱包地址，查看该地址下的资产分布
-2. 默认显示所有链的资产分布，你也可以选择某一条公链查看其资产分布
+1. The assets of the connected wallet are shown.
+2. By default, the assets of the connected wallet on all networks are shown. You can choose to view the assets on specific networks.
+
 
 ![image-20210816185935567](assets/guide/image-20210816185935567-9126854.png)
 
@@ -66,23 +67,10 @@ Hotpot 的流动性由FluxV1提供，解决滑点问题。
 
 ![image-20210817154722954](assets/guide/image-20210817154722954-9186444.png)
 
-## 历史交易 {#history}
+## Cross-chain swap history {#history}
 
-历史交易记录：在这里，你还可以看到当前登录钱包的所有历史交易记录，也可以查看Swap类型交易的详情。
+In the History tab (in the top menu on the website), you can find all historical cross-chain swaps of the connected account and more detailed information.
 
 ![image-20210816231743380](assets/guide/image-20210816231743380.png)
 
 ![image-20210817145820694](assets/guide/image-20210817145820694.png)
-
-
-
-
-
-
-
-
-
-
-
-
-

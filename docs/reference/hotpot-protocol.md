@@ -7,145 +7,162 @@ sidebar_position: 1
 
 Author: [ZeroOne Team](https://01.finance/) Version: 0.1
 
-## 摘要
+## Abstract
 
-Hotpot 是一种无损跨链兑换的去中心化解决方案，由一组持久、不可升级的智能合约来实现。旨在帮助用户（包括合约）在多链环境中，便捷、快速、安全地跨链兑换资产。具有去中心化、用时短、成本低和零滑点等特性。最终，Hotpot 将服务于有跨链需求的 DeFi 实现可编程跨链。
+HotPot Protocol is a decentralized cross-chain swap solution for cryptocurrencies implemented by a set of robust, non-upgradable smart contracts. HotPot Protocol helps users (incl. smart contracts) to seamlessly swap cryptocurrencies on different blockchain networks. It's fast, decentralized, safe, low-cost and with zero slippage. Ultimately, HotPot Protocol will support the requirements to develop programmable cross-chain DeFi.
 
-## 为什么需要 Hotpot？
+## Why Hotpot Protocol?
 
-当 Flux 需要实现跨链借贷时，对已流行的资产跨链协议，都无法满足 Flux 需求。为了支持 Flux 跨链借贷，ZeroOne 团队自行研发资产跨链协议。通过以下两方面对比解释 Hotpot 要解决的问题。
+To serve the needs of Flux Protocol's cross-chained lending and borrowing, existing solutions could not meet all requirements. Therefore, in order to achieve true cross-chain lending and borrowing, ZeroOne Labs has developed its own cross-chain solution: HotPot Protocol. The following two points discuss problems HotPot solve:
 
 ### Hotpot vs AMM
 
-当前市面上已存在的资产跨链兑换 DeFi（如 AnySwap、O3）均基于 AMM 架构设计，需要市场创建交易对和注入流动性，token 定价完全由 `x*y=K`  恒定乘积决定。
+Existing cross-chain swaps (e.g.: AnySwap, O3) are based on an AMM architecture and require liquidity providers to inject liquidity and the token prices are based on the equation x*y=k.
 
-大额订单会严重影响被购买 token 的价格。假设您想用 10 万个 DAI 购买 100 个ETH —— 当订单执行时，因为流动性不足，您的兑换将拉高 ETH 的价格，最终只能用10万个DAI购买80个ETH（或更少）。这是该恒定乘积算法的工作原理使然。如果流动性低，即使很小的订单，也很容易导致滑点产生。
+When users need to cross-chai swap a large amount of assets, the token price will be impacted when the liquidity of the liquidity pair (LP) isn't sufficient. For example, a user wants to cross-chain swap 100,000 DAI for 500 BNB (hypo. market price 1000 DAI / BNB) but can only swap 100,000 DAI for 450 BNB because of insufficient liquidity causing a token price impact and slippage. If the liquidity is small, even small swap orders will experience high price impacts.
 
-流动性是兑换交易的关键。为了解决流动性问题，Hotpot 将从 [Flux](https://flux.01.finance) 中信用借款（无抵押借款）。跨链兑换时，如果流动性不足将自动从 Flux 中借款来弥补流动性。当流动性充足时（或任意时候）Hotpot 随时向 Flux  支付利息和偿还借款。
 
-向 Flux 信用借款不仅可以解决流动性，也能提高 Flux 借贷资金利用率。
+Liquidity is of high-priority for swaps! To eliminate the liquidity problem, HotPot will credit borrow (non-collateralized) from ZeroOne's Flux Protocol. During a cross-chain swap, if the liquidity isn't sufficient, HotPot will borrow the required assets to increase the missing liquidity. Once the liquidity is sufficient (or any other given time) HotPot Protocol will pay the outstanding borrowings to Flux Protocol.
 
-同时， Hotpot 也允许任意地址提供流动性，获得流动性激励。将以单币形式提供流动性，流动性提供者无需承担无偿风险，零风险赚取流动性激励收益。
 
-### Hotpot vs 资产充提
+Not only does the credited borrow on Flux Protocol resolve the liquidity problems, it also increases Flux Protocol's money market utilization rate.
 
-假设您急需将 BSC 链上的 100 ETH 跨链到 OEX 链钱包，以参与头矿、补仓等交易。那么，你只能是将 BSC 100 ETH 充值到币安交易所，然后再从币安交易所提现到 OKEX 交易所，最后从 OKEX 交易所提币到 OEX 链钱包中。该过程极其耗时（超过 20 分钟），并且前提是您已拥有交易所交易账户。否则，为了充提资产，您需要注册交易账户，并完成 KYC 认证。
+At the same time, HotPot Protocol also allows any address to provide liquidity through incentives. To eliminate impermanent loss, HotPot's liquidity will be provided by single assets and receive rewards without risks.
+
+### HotPot vs Deposit & Withdrawal
+
+Imagine a user urgently needs to cross-chain 100 ETH from BSC to OEC (OKexChain) to participate in liquidity mining or other DeFi activity. The user needs to:
+
+1) Deposit the 100 ETH from BSC into their centralized Binance Exchange account
+2) Withdraw from Binance Exchange and deposit into their Okex Exchange account
+3) Withdraw from their Okex Exchange account into the OEC wallet
+
+Even without all 2FA, email verifications, endless clicks and personal security checks, the whole process takes at least 20 minutes. This time consumption is also based on the prerequisite that the user has completed their KYC on both centralized exchanges, without it, the whole process can even take up-to days.
+
 
 ![image-20210813205904914](assets/image-20210813205904914.png)
 
-为了提供便捷的资产跨链，Hotpot 无需复杂耗时的操作，一键操作即可 3.5 分钟完成资产跨链，无需 KYC，告别繁琐。
+To provide the industry with a more seamless cross-chain solution, HotPot Protocol reduces wasted operational time of cross-chaining crypto assets to less than 3.5 minutes (depending on the network), one-click and without KYC. Effortless and decentralized!
 
-这依赖与 Hotpot 在每条公链都拥有足够的流动性，并通过去中心化跨链桥协议快速完成资产跨链。
+However, the above solution requires HotPot Protocol to have sufficient liquidity on all networks, and a decentralized cross-chain solution to time-efficiently cross-chain assets.
 
-## 协议
 
-### 系统架构
+## Protocol Architecture
+
+### System Architecture
 
 ![image-20210813162036099](assets/image-20210813162036099.png)
 
-1. **LP** : 流动性提供者，FluxV1 提供信用借款来弥补流动性，任意地址可以为 Hotpot 提供流动性。
-2. **Gateway** : 负责处理跨链兑换交易，并通过跨链桥传递消息。
-3. **Vault** ：  Token 金库，为每个 token 独分配金库。流动性提供者提供的 token 也将在 vault 中保管，无人能直接动用该金库。
-4. **Cross Bridge**: 跨链桥，跨链兑换需要通过跨链桥将跨链兑换订单信息传递到目标链中，以便在目标链中完成资产释放。
+1. **LP** : Individual or grouped liquidity providers; Flux V1 credit-based borrowing to make up reinforce liquidity; any wallet address can provide liquidity to HotPot Protocol.
+2. **Gateway** : Responsible for processing cross-chain swaps and multi-chain communication.
+3. **Vault** : Token vault is the treasury allocated separately for each individual token. The assets of liquidity providers are kept in the vault, and no one can directly use the vault.
+4. **Cross Bridge**: Cross-chain bridge; any cross-chain swap order information is communicated to the destination network via the Cross Bridge to ensure the correct release of assets on the target network.
 
 
 
-### 资产 Token
+### Token
 
-Hotpot 早期流动性由 FluxV1 提供，因此早期所支持的跨链资产受FluxV1借贷池限制。首批支持的资产主要是主流Token： USDT、USDC、DAI 、 BTC 、ETH。 首个版本将只支持上述 Token 同币种 1:1 跨链兑换。
+In the early stage, Flux V1 will provide the necessary liquidity, therefore the selection of assets that can be swapped cross-chain are limited by Flux Protocol’s money markets on each network. The initial assets HotPot Protocol enables cross-chain swaps are: USDT, USDC, DAI, BTC, ETH. The first implementation of HotPot Protocol will only support 1:1 cross-chain swaps of the same asset.
 
-通过Hotpot，只需要支付极少的交易费便可将上述资产一键跨出到目标链中，交易时间取决于公链的交易确认速度。从 BSC 链转账 ETH 到 OKEXChain 链只需 3.5 分钟。
+Only a minimal amount of gas fee is necessary to cross-chain swap the above mentioned scenario with one-click through HotPot Protocol. Transactions depend on each network’s transaction confirmation time. To transfer ETH from BSC to OEC only takes 3.5 minutes.
 
-| 链        | 跨链桥等待交易确实时长 |
+| Network        | Cross Bridge Transaction Confirmation Time |
 | --------- | ---------------------- |
-| Ethereum  | 12个区块，10分钟       |
-| BSC       | 21个区块，63秒         |
-| HECO      | 21个区块，63秒         |
-| OKEXChain | 21个区块， 63秒        |
+| Ethereum  | 12 blocks, ~ 10 minutes|
+| BSC       | 21 blocks, ~ 63 seconds|
+| HECO      | 21 blocks, ~ 63 seconds|
+| OKEXChain | 21 blocks, ~ 63 seconds|
 
 ![assets/image-20210813162219332.png](assets/image-20210813162219332.png)
 
-### 流动性  {#liquidity}
+### Liquidity  {#liquidity}
 
-Hotpot 流动性由多方提供，流动性提供者可以是个人钱包，也可以是机枪池。为解决 Hotpot 上线早期的流动性问题，将从 FLUXV1 信用借款自动弥补流动性，当流动性不足时将从FluxV1信用借款，有新流动性加入时将自动还款并支付利息。
+HotPot Protocol’s liquidity can be provided by multiple parties. Liquidity providers can be individual wallet holders or liquidity aggregators. To mitigate and kick-start HotPot’s initial liquidity, credited borrowings from Flux V1 will inforce missing liquidity. When liquidity is insufficient, HotPot will borrow from Flux V1, and once the liquidity is sufficient, the credited outstanding borrowings will be returned to Flux Protocol.
 
-借款利息将由流动性提供者均摊，均摊成本由跨链兑换手续费和借款时长决定。流动性提供者的收益计算如下：
 
-```
-流动性提供者收益=    跨链手续费分成激励 + FLUX 借款挖矿收益 - 借款年利率 * 跨链数量 * 时长
-```
+Costs of borrowing interests are shared amongst all liquidity providers, and the total amount of costs is determined by the cross-chain swap's fees and the duration of the borrowings.
 
-其中跨链手续分成激励包含用户以 FLUX 支付的部分交易手续费。
-
-假设，USDT 借款年利率为 13%，借款挖矿收益率 8.25%，跨链手续费分成 0.21%， 在12小时内还款则有：
-
-```
-流动性提供者收益 = 数量 * 0.21% + 跨链数量*8.25%/365*0.5  - 跨链数量 * 13%/365 * 0.5 =  跨链数量 * 0.20349315%
+```txt
+Liquidity Provider Income = Cross-Chain Swap Fee Dividends + FLUX Borrowing Incentives - Borrowing Interests * Amount * Duration
 ```
 
-最终，流动性提供者的收益将由交易额决定，资金使用率越高，收益越高。
 
-> 注意，FluxV1 对 hotpot 以借款方式提供流动性，单币初始信用额度为 $100万，额度使用完毕将无法继续信用借款。
+Example, USDT Borrowing APY is 13 %, Flux borrowing incentives are 8.25%, cross-chain swap fee dividends are 0.21%, and the outstanding borrowings are returned in 12hours:
 
-### 跨链交易 {#trade}
 
-用户将持有资产通过hotpot跨出兑换到目标链中，由跨链桥负责传递跨链信息。
+```
+Liquidity Provider Income = Amount * 0.21% + Amount * 8.25% / 365 * 0.5 - Amount * 13% / 365
+(Amount equals the amount of tokens to be cross-chained)
+```
+
+The Liquidity Provider Income is determined by the amount of swaps, the higher the assets utilization rate, the higher the income.
+
+
+> Notice! The upper limit of any credited borrow on Flux V1 to Hotpot Protocol is $1 Million, once the upper limit is reached, the credited borrow is unavailable.
+
+### Cross-chain transaction {#trade}
+
+When a user cross-chains swaps all assets through Hotpot Protocol into a target network, the Cross Bridge is responsible for communicating the cross-chain information between the source and target network.
 
 ![assets/image-20210813161835125.png](assets/image-20210813161835125.png)
 
-假设张三从 A链跨链兑换 10 BTC 到 B  链：
+Example: User cross-chain swaps 10 BTC from network A (source) to network B (target):
 
-1. 10 BTC 流入 A链 Hotpot BTC 金库。
-2. A  链 Hotpot 发送跨链兑换消息 （ From：张三、To: 张三、SourceChain：A 链、TargetChain: B 链、Amount：10 BTC 、Fee : 0.03 BTC）
-3. Bridge 将监听接收到跨链消息后，将自动在 B链触发兑换。
-4. B链 Hotpot 验证兑换消息后，从 BTC 金库中转账 10-0.03 BTC 给张三。一些特殊情况下，当 BTC 金库流动性不足以转账时，该订单将属于Pending状态，等待流动性充足时自动继续转账。
+1. 10 BTC are transferred into network A's BTC vault
+2. Hotpot network A sends the cross-chain swap information (From: User; To: User; SourceChain: network A; TargetChain: network B; Amount: 10 BTC; Fee: 0.03 BTC)
+3. Cross Bridge monitors and receives the cross-chain swap initiation information and automatically initiates the swap's transaction on network B)
+4. Network B's Hotpot receives the cross-chain information and transfers 10-0.03 BTC to user. When the liquidity in the BTC Vault is insufficient, the order remains in a pending status, and resumes automatically once the liquidity is sufficient
 
-### 交易手续费 {#trade-fee}
 
-需要支付两部分手续费才能将资产一键跨链兑换到其他链中，这两部分手续费分别是：
+### Transaction Fees {#trade-fee}
 
-1. **过桥手续费**：由跨链桥基础设施收取的跨链手续费，用于在目标链中执行跨链交易，使用公链平台币(如 BSC 链的 BNB)支付。
+Two transaction fees are required to cross-chain swap into another network with one click, these two transaction fees are listed below:
 
+
+1. **Cross-chain swap fees** : transaction fees required by the Cross Bridge's infrastructure due to the target chain's native transaction fees aka gas fees, e.g. BNB on BSC network.
+
+  ```txt
+  Bridging Fees = Target Network Gas Fees * Target Network Asset Price / Source Network Asset Price
   ```
-  过桥费=  目标链交易Gas费* 目标链平台币价格 / 源链平台币价格 * 1.2
-  ```
 
 
-1. **兑换交易手续费**：
+1. **transaction fee**：
 
-   由hotpot平台收取的交易手续费，默认使用Flux支付，也可以使用跨链资产支付，大部分作为流动性提供者费用奖励给流动性提供者。
+   The default transaction fee asset collected by Hotpot is $FLUX, but the cross-chain asset can also be used to pay for the cross-chain fee. Most of the collected transaction fees are distributed to liquidity providers.
 
-   1. Hotpot上线初期，允许使用Flux支付（8折优惠），收取 2.4‰ 手续费，等于`跨链数量*跨链资产价格*0.0024/FLUX价格`。
-   2. 使用跨链资产支付，将收取 3 ‰ 手续费 `跨链数量*跨链资产价格*0.003`。
 
-    hotpot 收取到兑换手续费中30%归hotpot团队所有，70%按比例分给为hotpot流动性提供者。
+   1. Hotpot will give a 20% rebate to users using $FLUX as the payment medium for transaction fees. With the rebate the transaction fee is 2.4%.
+   2. Cross-Chain Asset Amount * Asset Price * 0.0024 / $FLUX Price.
+
+  Users using the cross-chain asset as the payment medium for transaction fees, the transaction fee is 3%.
 
 ![assets/image-20210813162355632.png](assets/image-20210813162355632.png)
 
-### 流动性调仓 {#liquidity-rebalance}
+### Liquidity Rebalance {#liquidity-rebalance}
 
-当挤兑或某链DeFi火爆时容易造成不同链之间的流动性失衡。为了尽可能的恢复平衡，Hotpot将监控各链的流动性情况，通过垫付资金方式调整流动性。根据过去 12 小时内每条链的跨链交易额来确定每条链理想流动性分配比例。
+When certain assets on a specific network are in high demand (due to DeFi FOMO etc.) the liquidity across the networks may be subject to imbalance. To maintain a well-balanced cross-chain across the different networks, Hotpot monitors each network’s liquidity, and automatically adjusts any below-threshold liquidity through advance funds.
 
-比如过去 12 小时中，USDC 在 OEC、BSC、HECO 的交易额为 5 万、6 万、9 万。因此可以简单预测 OEC、BSC 和 HECO 上的流动性应该保持 0.25 : 0.3 : 0.45 分配比，以满足未来 12 小时的 USDC 在各链中的流动性。
+Threshold: the ideal liquidity distribution ration of each network is determined based on the cross-chain transaction volume of each network in the past 12 hours. If the vault balance falls below 40%, the position needs to be adjusted.
 
 ![image-20210813162427045](assets/image-20210813162427045.png)
 
-### 跨链桥与风险防范 {#risk}
+### Cross-chain bridge and risk prevention {#risk}
 
-由跨链桥基础设施负责从 Chain X 到 Chain Y 传递跨链事件。为了寻找满足 Hotpot 的资产跨链需求，当前从已知的主流跨链桥中，选择 ChainLink、AnySwap 和 Poly 来充当 Hotpot 的跨链桥。
+The cross-chain infrastructure is responsible for communicating the orders from Network X to Network Y. To meet Hotpot's cross-chain requirements well-known bridges (Chainlink, Multichain formerly AnySwap, Poly Network) are selected as Hotpot's bridge.
 
-Hotpot 不直接信任单一跨链桥，采用混用、二次确认的方式来避免单一跨链桥作恶（或漏洞利用攻击）。Hotpot 的跨链事件要求至少两个跨链桥分别确认才能被视为合法跨链。
+Hotpot doesn’t directly trust any Bridge and adopts a mixed use and secondary confirmation method to avoid a single cross-chain bridge from malicious behaviour (or vulnerability to exploitation). Hotpot Protocol’s cross-chain swap execution requires at least two cross-chain bridges to be separately confirmed according to Hotpot's risk prevention strategy before it can be processed. The risk prevention strategy requires medium to large sized swaps to be confirmed twice, while small sized swaps only need one confirmation by any of the cross-chain bridges.
 
-同时，为了防止部分跨链桥故障，引起无法完成二次确认。Hotpot 会实时监控，并在一定条件下激活允许备用服务，辅助二次确认。
+At the same time, to prevent malfunction of any bridge solution causing troubles for the secondary confirmation, Hotpot is constantly monitoring, and will activate plus allow backup services to complete the secondary confirmation when the requirements are met.
 
-### 可编程跨链 {#program-cross}
 
-Hotpot 的梦想时，在多链时代，帮助 DeFi 开发者快速、安全的实现跨链开发。将为 DeFi 开发者提供统一的跨链交互API（内置各种主流跨链协议）。DeFi开发者无需担心跨链桥单节点故障，并支持在多个跨链桥中无缝切换。
+### Programmable cross-chaining {#program-cross}
 
-以 Flux 跨链借贷场景为起点，探索和完善跨链场景，为 DeFi 可编程跨链提供基础服务支撑，为 DeFi 提供跨链SDK，包括 NPM Package，也包括跨链智能合约协议包。
+In the multi-chain era, Hotpot Protocol's vision is to support DeFi developers to create cross-chain products in a secure environment and in a secure fashion. Developers will have access to a unified cross-chain interaction API (applicable to various mainstream networks). DeFi develops shall not worry about single points of failure of cross-chain bridges, and have the ability to seamlessly switch between networks.
 
-## 发展路线 {#map}
+Built on Flux Protocol's lending and borrowing scenario at first, Hotpot will further explore and improve for future use-cases. Hotpot aims to provide basic service solutions, such as cross-chain DeFi SDK, including NPM and Multichain Smart Contract Protocol packages.
 
-- [x]  v1: 主流 Token 跨链兑换
+## Roadmap {#map}
+
+- [x] v1: 主流 Token 跨链兑换
 - [ ] v2: 支持任意 Token 跨链兑换
 - [ ] v3: 支持任意 DeFi 可编程跨链
