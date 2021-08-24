@@ -120,11 +120,11 @@ module.exports = {
             },
             {
               label: "Telegram",
-              href: "https://t.me/ohHotpot/",
+              href: "https://t.me/hotpot01/",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/Hotpot01/",
+              href: "https://twitter.com/hotpot01/",
             },
           ],
         },
