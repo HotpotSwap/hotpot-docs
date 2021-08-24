@@ -163,6 +163,6 @@ Built on Flux Protocol's lending and borrowing scenario at first, Hotpot will fu
 
 ## Roadmap {#map}
 
-- [x] v1: 主流 Token 跨链兑换
-- [ ] v2: 支持任意 Token 跨链兑换
-- [ ] v3: 支持任意 DeFi 可编程跨链
+- [x] Hotpot V1: Cross-chain swap of mainstream assets
+- [ ] Hotpot V2: All assets on supported networks can be cross-chain swapped
+- [ ] Hotpot V3: Programmable and automated cross-chain swaps
